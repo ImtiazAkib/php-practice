@@ -2,6 +2,7 @@
 step1:make a folder in xampp->htdocs->name a folder
 step2:create your php file in that folder
 step3:edit the php with vscode
+step4:to render the file in browser go to http://localhost/folder name/your php file
 -->
 
 <?php
