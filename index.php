@@ -10,27 +10,27 @@ $conn = mysqli_connect("localhost", "root", "", "college"); //connect with mysql
 //isset($_POST['submit']) means if submit button is clicked
 if(isset($_POST['submit'])){
 
-//here each variable for each column name
+//here each variable for each column name except the primary key field
   $name = $_POST['name'];
   $gender = $_POST['gender'];
   $age = $_POST['age'];
   $gpa = $_POST['gpa'];
   $city = $_POST['city'];
 
-//here mysqli_query is for post method to insert data in database
+// here mysqli_query is for post method to insert data in database
   mysqli_query($conn,"Insert into students (Name,Gender,Age,GPA,City) VALUES( '$name', '$gender', '$age', '$gpa', '$city')");
 }
 ?>
 
-//html code start
+<!-- html code start -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  //head optional
+  <!-- head optional -->
   <head>
     <meta charset="utf-8">
     <title>Insert Data</title>
   </head>
-  //style optional
+  <!-- style optional -->
   <style>
     body{
     display:flex;
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
     }
   </style>
   <body>
-    //form tag for form data and method attribute for post the data
+    <!-- form tag for form data and method attribute for post the data -->
     <form  method="POST">
       <label for="">Name</label>
       <input type="text" name="name" required value="">
@@ -57,9 +57,9 @@ if(isset($_POST['submit'])){
       <label for="">city</label>
       <input type="name" name="city" required value="">
       <br>
-     
+     <br>
       <button type="submit" name="submit">Submit</button>
-      //submit button for submit the data
+      <!-- submit button for submit the data -->
     </form>
   </body>
 </html>
